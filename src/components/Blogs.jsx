@@ -55,6 +55,7 @@ const Blogs = () => {
           const result = data.value;
           const blogsArray = Array.isArray(result) ? result : [result];                 
           setBlogs((prevBlogs) => [...prevBlogs, ...blogsArray]);
+          console.log(blogsArray);
         } catch (error) {
           console.error('Error fetching data:', error);
         } finally {

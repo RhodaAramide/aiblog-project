@@ -8,7 +8,7 @@ export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const history = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate(); // Initialize useNavigate
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {

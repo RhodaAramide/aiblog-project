@@ -9,6 +9,7 @@ import ResourcePage from './pages/ResourcePage.jsx';
 import BlogForm from './components/BlogForm.jsx';
 import './App.css'
 import BlogDetail from './components/BlogDetail.jsx';
+import BlogDetails from './components/BlogDetail.jsx';
 
 
 
@@ -19,7 +20,7 @@ function App() {
       <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/blogs" element={<BlogPage />} />
-          <Route path="/blogs/:url" element={<BlogDetail />} />
+          <Route path="/blogs/:id" element={<BlogDetails />} />
           <Route path="/resources" element={<ResourcePage />} />
           {/* <Route path="/authors" element={<AuthorsPage />} /> */}
           <Route path="/contact" element={<ContactPage />} />                   

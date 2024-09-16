@@ -31,7 +31,11 @@ function BlogCard({blogs}) {
                         <p className='inline-flex items-center'>
                             Source: {blog.provider.domain}
                         </p>
-                        <Link to={`/blogs/${encodeURIComponent(blog.title)}`} className="text-primary hover:underline">
+                        <Link to={{
+                    pathname: `/blogs/${encodeURIComponent(blog.originalUrl)}`,
+                  }}
+                  state={{ blog }} // Pass blog data through state
+                  className="text-primary hover:underline">
                         <p className=''>Read More...</p>
                         </Link>
                     </div>
