@@ -14,7 +14,7 @@ const SideBar = ({data}) => {
     <div>
         {/* Latest blogs */}
         <div>
-            <h3 className='text-2xl font-semibold px-4'>Latest</h3>
+            <h3 className='text-3xl font-bold px-4 text-primary'>Latest</h3>
             <div>
                 {
                     popularBlogs.slice(0, 5).map(blog => 
@@ -34,7 +34,7 @@ const SideBar = ({data}) => {
         </div>
         {/* Popular blogs */}
         <div className=''>
-            <h3 className='text-2xl font-semibold px-4 mt-20'>Popular</h3>
+            <h3 className='text-3xl font-bold px-4 text-primary mt-20'>Popular</h3>
             <div>
                 {
                     popularBlogs.slice(6, 10).map(blog => 

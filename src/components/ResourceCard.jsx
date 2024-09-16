@@ -7,11 +7,11 @@ const ResourceCard = ({resources}) => {
     return (
         <div className='h-full '>
             {resources.length > 0 ? (
-                <div className='max-w-xs mx-auto grid gap-6 lg:grid-cols-3 items-start lg:max-w-none h-full'>
+                <div className='grid gap-6 lg:grid-cols-3 items-stretch lg:max-w-none h-full'>
                 {
                     resources.map((resource) => <Link key={resource.originalUrl} href={resource.originalUrl} target="_blank" rel="noopener noreferrer"
                     className='p-5 shadow-lg rounded cursor-pointer'>
-                        <div>
+                        <div className='flex-grow'>
                             {resource.images && Array.isArray(resource.images) && resource.images.length > 0 ? (
                                 <img src={resource.images[0].url} alt={resource.title || 'Blog Image'} 
                                 className='object-cover h-48 w-full' width="304" height="192" />
@@ -27,10 +27,10 @@ const ResourceCard = ({resources}) => {
                             
                             {resource.excerpt}
                         </p>
-                        <p className='text-sm text-gray-500'>
-                            Published: {resource.publishedDateTime}                            
+                        <p className='text-sm pt-4 font-semibold text-white'>
+                            Published: {resource.publishedDateTime ? resource.publishedDateTime : 'N/A'}                            
                         </p>
-                        <p className='text-sm text-gray-500'>
+                        <p className='text-sm font-semibold text-white'>
                                 Source: {resource.provider.domain}
                         </p>
                     </Link>)

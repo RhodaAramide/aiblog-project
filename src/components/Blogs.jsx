@@ -72,11 +72,11 @@ const Blogs = () => {
   
     return (
       <div>
-        <div className='px-4 mb-8 lg:space-x-16 flex-wrap items-center border-b-2 py-5 text-gray-500'>        
+        <div className='px-4 mb-8 flex lg:space-x-16 lg:flex-wrap items-center border-b-2 py-5 text-gray-500 text-sm lg:text-lg font-bold'>        
         {topics.map((t) => (
           <button key={t.value} 
             onClick={() => handleTopicChange(t.value)}
-            className={`lg:ml-12 mr-2 space-x-16  ${activeCategory === t.name ? "active-button" : "" }`}
+            className={`lg:ml-12 mr-2 space-x-16  ${activeCategory === t.value ? "active-button" : "" }`}
             >
             {t.name}
           </button>
