@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #cccc;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+}
+
+.pagination a:hover {
+    background: #eee;
+}
+
+.pagination li.activerPagination {
+    background: #FFD11A;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.active-button {
+    color: #fc3c1a;
+}
+
+/* Dropdown */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: end;
+    z-index: 1000;
+ }
+ 
+ .modal-content {
+    background: black;
+    padding: 20px;
+    border-radius: 8px;
+    height: 60%;
+    width: 23%;
+    margin-top: 4%;
+    margin-right: 5%;
+ }
+ 
+ .btn-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+ }
+ 
+ .modal-overlay.open {
+    display: flex;
+ }
