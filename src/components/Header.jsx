@@ -15,7 +15,7 @@ const Header = () => {
               <h3 className='text-accent text-lg md:text-3xl font-medium font-kumbh'>
                 Your Journey to Tomorrow Begins Here
               </h3>
-              <h1 className="font-medium text-3xl md:text-[70px] md:leading-[84px] py-4 font-kumbh">
+              <h1 className="font-medium text-3xl md:text-[60px] md:leading-[84px] py-4 font-kumbh">
                 Explore the Frontiers of Artificial Intelligence
               </h1>
               <p className='text-accent text-lg font-normal md:text-base'>

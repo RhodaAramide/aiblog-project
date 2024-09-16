@@ -43,7 +43,7 @@ const DropdownModal = ({ isOpen, handleClose, user }) => {
             
             </div>
             <div className="flex justify-center w-full">
-                <Link to="/wishlist" className="bg-secondary text-white font-bold py-1 px-3 rounded-md hover:bg-primary/35">My Wishlist</Link>
+                <Link to="/bookmarked" className="bg-secondary text-white font-bold py-1 px-3 rounded-md hover:bg-primary/35">My Wishlist</Link>
             
             </div>
             </div>

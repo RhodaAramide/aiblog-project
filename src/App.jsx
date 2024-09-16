@@ -3,13 +3,12 @@ import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
 import HomePage from './pages/HomePage.jsx';
 import BlogPage from './pages/BlogPage.jsx';
-import AuthorsPage from './pages/AuthorsPage.jsx';
 import ContactPage from './pages/ContactPage.jsx';;
 import ResourcePage from './pages/ResourcePage.jsx';
 import BlogForm from './components/BlogForm.jsx';
 import './App.css'
-import BlogDetail from './components/BlogDetail.jsx';
 import BlogDetails from './components/BlogDetail.jsx';
+import BookmarkedBlogs from './pages/BookmarkPage.jsx';
 
 
 
@@ -22,7 +21,7 @@ function App() {
           <Route path="/blogs" element={<BlogPage />} />
           <Route path="/blogs/:id" element={<BlogDetails />} />
           <Route path="/resources" element={<ResourcePage />} />
-          {/* <Route path="/authors" element={<AuthorsPage />} /> */}
+          <Route path="/bookmarked" element={<BookmarkedBlogs />} />
           <Route path="/contact" element={<ContactPage />} />                   
           <Route path="/create" element={<BlogForm />} />
       </Routes>
