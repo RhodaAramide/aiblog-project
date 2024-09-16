@@ -3,6 +3,7 @@ import { FaFacebookF } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Newsletter = () => {
+  const handleClick = () => { alert('Thank you for subscribing to our newsletter') }
   return (
     <div className='pb-8'>
       <div className='container mx-auto max-w-5xl mb-4'>
@@ -12,7 +13,9 @@ const Newsletter = () => {
             <p className='text-white/90 text-center pb-8 px-4'>Subscribe to our Newsletter For New & latest Blogs and Resources</p>
             <div className='flex justify-center items-center ' >
               <input placeholder='youremail123@gmail.com ' className='text-text h-12 border-text border-2 rounded-l pl-4 py-2 bg-transparent' />
-              <button className='bg-primary h-12 px-6 py-3 text-black font-bold rounded-r'>
+              <button 
+              onClick={handleClick}
+              className='bg-primary h-12 px-6 py-3 text-black font-bold rounded-r'>
                 < FaArrowUpRightDots />
               </button>
             </div>

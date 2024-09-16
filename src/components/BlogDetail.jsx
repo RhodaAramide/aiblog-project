@@ -1,5 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import BlogImage from '../assets/images/BlogImage.svg';
 
 function BlogDetails() {
   const location = useLocation();
@@ -15,7 +16,7 @@ function BlogDetails() {
     setComments(storedComments);
 
     // Check if the blog is bookmarked
-    const storedBookmarks = JSON.parse(localStorage.getItem('bookmarkedBlogs')) || [];
+    const storedBookmarks = JSON.parse(localStorage.getItem('bookmarkedData')) || [];
     const isBookmarked = storedBookmarks.some(b => b.originalUrl === blog.originalUrl);
     setBookmarked(isBookmarked);
   }, [blog.originalUrl]);
@@ -32,7 +33,7 @@ function BlogDetails() {
 
   // Handle bookmarking the blog
   const handleBookmark = () => {
-    let storedBookmarks = JSON.parse(localStorage.getItem('bookmarkedBlogs')) || [];
+    let storedBookmarks = JSON.parse(localStorage.getItem('bookmarkedData')) || [];
 
     if (bookmarked) {
       // Remove bookmark
@@ -44,7 +45,7 @@ function BlogDetails() {
       alert('Blog bookmarked successfully!');
     }
 
-    localStorage.setItem('bookmarkedBlogs', JSON.stringify(storedBookmarks));
+    localStorage.setItem('bookmarkedData', JSON.stringify(storedBookmarks));
     setBookmarked(!bookmarked);  // Toggle bookmark state
   };
 
@@ -53,7 +54,7 @@ function BlogDetails() {
       <h1 className="text-2xl font-bold">{blog.title}</h1>
       <p className="text-gray-500">Published on: {blog.publishedDateTime}</p>
       <p className="text-gray-500">Source: {blog.provider.domain}</p>
-      <img src={blog.images ? blog.images[0].url : '/defaultImage.jpg'} alt={blog.title} className="my-4" />
+      <img src={blog.images ? blog.images[0].url : {BlogImage}} alt={blog.title} className="my-4" />
       <p>{blog.excerpt || 'No content available.'}</p>
 
       {/* Bookmark button */}

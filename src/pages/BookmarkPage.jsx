@@ -2,21 +2,21 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import BlogImage from '../assets/images/BlogImage.svg';
 
-function BookmarkedBlogs() {
-  const [bookmarkedBlogs, setBookmarkedBlogs] = useState([]);
+function bookmarkedData() {
+  const [bookmarkedData, setbookmarkedData] = useState([]);
 
   useEffect(() => {
-    const storedBookmarks = JSON.parse(localStorage.getItem('bookmarkedBlogs')) || [];
-    setBookmarkedBlogs(storedBookmarks);
+    const storedBookmarks = JSON.parse(localStorage.getItem('bookmarkedData')) || [];
+    setbookmarkedData(storedBookmarks);
   }, []);
 
   return (
     <div className="container mx-auto p-5">
-      <h1 className="text-2xl font-bold">Your Bookmarked Blogs</h1>
+      <h1 className="text-2xl font-bold py-4">Your Bookmarked Blogs</h1>
 
-      {bookmarkedBlogs.length > 0 ? (
+      {bookmarkedData.length > 0 ? (
         <ul className="list-none bg-secondary shadow-lg">
-          {bookmarkedBlogs.map((blog) => (
+          {bookmarkedData.map((blog) => (
             <li key={blog.originalUrl} className="my-8">
               <Link to={`/blogs/${encodeURIComponent(blog.originalUrl)}`} state={{ blog }}>
                 <div className='lg:flex space-x-4'>
@@ -42,10 +42,10 @@ function BookmarkedBlogs() {
           ))}
         </ul>
       ) : (
-        <p>No blogs bookmarked yet.</p>
+        <p className='py-16'>No blogs bookmarked yet.</p>
       )}
     </div>
   );
 }
 
-export default BookmarkedBlogs;
+export default bookmarkedData;

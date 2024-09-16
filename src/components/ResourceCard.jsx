@@ -33,7 +33,15 @@ const ResourceCard = ({resources}) => {
                         <p className='text-sm font-semibold text-white'>
                                 Source: {resource.provider.domain}
                         </p>
-                    </Link>)
+                        <Link to={{
+                    pathname: `/resources/${encodeURIComponent(resource.originalUrl)}`,
+                  }}
+                  state={{ resource }} // Pass resource data through state
+                  className="text-primary hover:underline">
+                        <p className=''>Read More...</p>
+                        </Link>
+                    </Link>
+                    )
             }
 
         </div>
