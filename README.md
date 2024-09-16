@@ -1,7 +1,8 @@
 
-# MyBlog Project
+# AI Blog Website
 
-Welcome to the MyBlog Project! This is a simple blog website built with modern web technologies.
+Explore the Frontiers of Artificial Intelligence. 
+Welcome to the epicenter of AI innovation. FutureTech AI News is your passport to a world where machines think, learn, and reshape the future. Join us on this visionary expedition into the heart of AI.
 
 ## Features
 
@@ -19,7 +20,7 @@ Welcome to the MyBlog Project! This is a simple blog website built with modern w
 
 ## Technologies Used
 
-- Frontend: React, Tailwind CSS
+- Frontend: React, Tailwind CSS, Firebase
 
 
 ## Installation
@@ -51,6 +52,9 @@ Welcome to the MyBlog Project! This is a simple blog website built with modern w
     npm run dev
     ```
 2. Open your browser and go to `http://localhost:5173`
+
+## Deployment
+Link to the deployed website: [FutureTech AI News](aiblogwebapp.netlify.app)
 
 ## Contributing
 
