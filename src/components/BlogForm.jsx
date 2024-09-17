@@ -10,6 +10,7 @@ const BlogForm = () => {
   const [title, setTitle] = useState('');
   const [tags, setTags] = useState('');
   const [content, setContent] = useState('');
+  const [category, setCategory] = useState('');
   const [image, setImage] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -33,6 +34,7 @@ const BlogForm = () => {
       // Save blog post in Firestore
       await addDoc(collection(db, 'blogs'), {
         title,
+        category,
         tags,
         content,
         imageUrl,
@@ -42,6 +44,8 @@ const BlogForm = () => {
 
       // Reset the form
       setTitle('');
+      setCategory('');
+      setTags('');
       setContent('');
       setImage(null);
       alert("Blog post created successfully!");
@@ -68,6 +72,14 @@ const BlogForm = () => {
         placeholder="Blog Title"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
+        required
+        className="w-full border rounded p-2 text-black"
+      />
+      <input
+        type="text"
+        placeholder="Blog Category"
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
         required
         className="w-full border rounded p-2 text-black"
       />
