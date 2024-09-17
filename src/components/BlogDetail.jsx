@@ -88,7 +88,7 @@ function BlogDetails() {
           />
           <button
             onClick={handleAddComment}
-            className="px-4 py-2 bg-green-500 text-white rounded-lg"
+            className="px-4 py-2 bg-primary text-white rounded-lg"
           >
             Add Comment
           </button>
