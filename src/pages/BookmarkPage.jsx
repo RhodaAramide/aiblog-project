@@ -12,7 +12,7 @@ function bookmarkedData() {
 
   return (
     <div className="container mx-auto p-5">
-      <h1 className="text-2xl font-bold py-4">Your Bookmarked Blogs</h1>
+      <h1 className="text-2xl font-bold py-4">Your Bookmarked Data</h1>
 
       {bookmarkedData.length > 0 ? (
         <ul className="list-none bg-secondary shadow-lg">
@@ -42,7 +42,7 @@ function bookmarkedData() {
           ))}
         </ul>
       ) : (
-        <p className='py-16'>No blogs bookmarked yet.</p>
+        <p className='py-16'>No item bookmarked yet.</p>
       )}
     </div>
   );

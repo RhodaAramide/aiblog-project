@@ -117,6 +117,34 @@ const Navbar = () => {
                                 </Link>
                             ))}
                         </div>
+                        <div className="ml-4">
+                            {user ? (
+                                <>
+                                    <button
+                                        onClick={toggleDropdown}
+                                        className="flex justify-between items-center gap-1 "
+                                    >
+                                         <FaUser
+                                            className="w-6 h-6"
+                                        />
+                                        <h1 className="text-[16px] mds:text-[20px] font-semibold lgss:w-[180px]">
+                                            Welcome, {user.displayName || user.email}
+                                        </h1>  
+                                        <FaChevronDown />                               
+                                    </button>
+                                    <DropdownModal
+                                        isOpen={isDropdownOpen}
+                                        handleClose={() => setIsDropdownOpen(false)}                                        
+                                        user={user}
+                                    />                                    
+                                </>
+                            ) : (
+
+                                <button onClick={loginWithGoogle} className="bg-primary text-black px-6 py-2 rounded-lg shadow-md hover:bg-hover transition-all duration-300 ease-in">
+                                    Log In
+                                </button>
+                            )}
+                        </div>
                     </div>
                 </div>
             </nav>
