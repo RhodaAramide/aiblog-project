@@ -59,9 +59,9 @@ const BlogForm = () => {
   }
 
   return (
-    <div className=' my-8 p-4'>
+    <div className=' my-8 p-4 text-black'>
     <form onSubmit={handleSubmit} className="max-w-2xl bg-secondary h-full rounded-lg mx-auto p-8 space-y-4">
-      <h1 className='font-semibold text-2xl mb-2'>Have you got articles to post about AI? </h1>
+      <h1 className='font-semibold text-white text-2xl mb-2'>Have you got articles to post about AI? </h1>
         <p className='text-lg text-white/60 mb-8'>Then, go ahead and post it on our blog page now! </p>
       <input
         type="text"
@@ -69,7 +69,7 @@ const BlogForm = () => {
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         required
-        className="w-full border rounded p-2"
+        className="w-full border rounded p-2 text-black"
       />
       <input
         type="text"
@@ -77,14 +77,14 @@ const BlogForm = () => {
         value={tags}
         onChange={(e) => setTags(e.target.value)}
         required
-        className="w-full border rounded p-2"
+        className="w-full border rounded p-2 text-black"
       />
       <textarea
         placeholder="Blog Content"
         value={content}
         onChange={(e) => setContent(e.target.value)}
         required
-        className="w-full border rounded p-2"
+        className="w-full border rounded p-2 text-black"
       />
       <div>
       <input type="file" onChange={handleImageChange} className="border" />

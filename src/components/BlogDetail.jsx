@@ -1,6 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import BlogImage from '../assets/images/BlogImage.svg';
+import { FaUser } from 'react-icons/fa';
 
 function BlogDetails() {
   const location = useLocation();
@@ -54,7 +55,7 @@ function BlogDetails() {
       <h1 className="text-2xl font-bold">{blog.title}</h1>
       <p className="text-gray-500">Published on: {blog.publishedDateTime}</p>
       <p className="text-gray-500">Source: {blog.provider.domain}</p>
-      <img src={blog.images ? blog.images[0].url : {BlogImage}} alt={blog.title} className="my-4" />
+      <img src={blog.images ? blog.images[0].url : {BlogImage}} alt={blog.title} className="my-4 rounded-lg max-w-md" />
       <p>{blog.excerpt || 'No content available.'}</p>
 
       {/* Bookmark button */}
@@ -69,9 +70,9 @@ function BlogDetails() {
       <div className="mt-6">
         <h2 className="text-xl font-semibold mb-2">Comments</h2>
 
-        <ul className="list-disc pl-5 mb-4">
+        <ul className="pl-5 mb-4">
           {comments.length > 0 ? (
-            comments.map((comment, index) => <li key={index} className="mb-2">{comment}</li>)
+            comments.map((comment, index) => <li key={index} className="mb-2 text-primary"> <FaUser className='w-5 h-5' /> {comment}</li>)
           ) : (
             <p>No comments yet. Be the first to comment!</p>
           )}
@@ -80,7 +81,7 @@ function BlogDetails() {
         <div className="flex flex-col gap-4">
           <textarea
             type="text"
-            className="border p-2 flex-grow h-32 rounded-lg"
+            className="border p-2 flex-grow h-32 rounded-lg text-black"
             placeholder="Add a comment..."
             value={newComment}
             onChange={(e) => setNewComment(e.target.value)}

@@ -20,7 +20,7 @@ const Navbar = () => {
     const { pathname } = useLocation();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const { user, loginWithGoogle } = useContext(AuthContext);
+    const { user, loginWithGoogle, logout } = useContext(AuthContext);
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
     };
@@ -120,8 +120,7 @@ const Navbar = () => {
                         <div className="ml-4">
                             {user ? (
                                 <>
-                                    <button
-                                        onClick={toggleDropdown}
+                                    <button                                        
                                         className="flex justify-between items-center gap-1 "
                                     >
                                          <FaUser
@@ -129,14 +128,26 @@ const Navbar = () => {
                                         />
                                         <h1 className="text-[16px] mds:text-[20px] font-semibold lgss:w-[180px]">
                                             Welcome, {user.displayName || user.email}
-                                        </h1>  
-                                        <FaChevronDown />                               
+                                        </h1>                                                                         
                                     </button>
-                                    <DropdownModal
-                                        isOpen={isDropdownOpen}
-                                        handleClose={() => setIsDropdownOpen(false)}                                        
-                                        user={user}
-                                    />                                    
+                                    <div className='my-4'>
+                                        <Link to="/create" className="bg-primary text-white my-4 font-bold py-1 px-3 rounded-md hover:bg-primary/35">
+                                        Create Post
+                                        </Link>
+                                    </div>     
+                                    <div>
+                                    <Link to="/bookmarked" className="bg-primary text-white my-4 font-bold py-1 px-3 rounded-md hover:bg-primary/35">My Wishlist</Link>
+                                    </div>  
+                                    <div>
+                                    <Link                
+                                        className="bg-red-600 py-1 px-8 rounded-3xl text-white text-[14px]"
+                                        onClick={logout}
+                                    >
+                                        <button className="w-[50%]  text-white font-semibold h-[48px]">
+                                        Log Out
+                                        </button>
+                                    </Link>
+                                    </div>               
                                 </>
                             ) : (
 

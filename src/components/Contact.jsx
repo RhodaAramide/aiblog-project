@@ -1,23 +1,4 @@
-// import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-// import { motion } from "framer-motion";
 
-// const contactInfo = [
-//     {
-//         icon: <FaPhoneAlt />,
-//         name: "Phone",
-//         info: "+234 81 0580 9460",
-//     },
-//     {
-//         icon: <FaEnvelope />,
-//         name: "Email",
-//         info: "olabisiabolarin5@gmail.com",
-//     },
-//     {
-//         icon: <FaMapMarkerAlt />,
-//         name: "Address",
-//         info: "Ibadan, Oyo State, Nigeria",
-//     },
-// ];
 
 const Contact = () => {
     const handleSubmit = (e) => {
@@ -40,14 +21,6 @@ const Contact = () => {
 };
 
     return (
-        // <motion.section
-        //     initial={{ opacity: 0 }}
-        //     animate={{
-        //         opacity: 1,
-        //         transition: { delay: 1.4, duration: 0.4, ease: "easeIn" },
-        //     }}
-        //     className="py-6"
-        // >
             <div className="container mx-auto mb-8">
                 <div className="flex justify-center p-8">
                     {/* form */}
@@ -106,7 +79,7 @@ const Contact = () => {
                                 name="message"
                                 placeholder="Type your message here..."
                                 required
-                                className="flex min-h-[80px] h-[200px] w-full rounded-md border border-white/10
+                                className="flex min-h-[80px] h-[200px] w-full rounded-md border border-white/10 text-black
                                                             bg-white px-4 py-5 text-base placeholder:text-black focus-visible:outline-none
                                                             focus-visible:ring-1 focus-visible:ring-accent focus-visible:ring-offset-0
                                                             disabled:cursor-not-allowed disabled:opacity-50"

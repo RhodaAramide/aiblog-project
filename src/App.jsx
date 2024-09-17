@@ -9,6 +9,7 @@ import BlogForm from './components/BlogForm.jsx';
 import './App.css'
 import BlogDetails from './components/BlogDetail.jsx';
 import BookmarkedData from './pages/BookmarkPage.jsx';
+import ResourcesDetails from './components/ResourcesDetails.jsx';
 
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/blogs" element={<BlogPage />} />
           <Route path="/blogs/:id" element={<BlogDetails />} />
           <Route path="/resources" element={<ResourcePage />} />
+          <Route path="/resources/:id" element={<ResourcesDetails />} />
           <Route path="/bookmarked" element={<BookmarkedData />} />
           <Route path="/contact" element={<ContactPage />} />                   
           <Route path="/create" element={<BlogForm />} />
